@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
+body > div {
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+h1 {
+    font-weight: lighter;
+    margin: 0;
+    padding: 20px;
+    color: #e9e9e9;
+}
+
+p {
+    color: #e9e9e9;
+}
