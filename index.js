@@ -1,3 +1,17 @@
+window.onload = () => {
+    document.getElementById('snakebtn').addEventListener("click", () => {
+        const snake = document.getElementById('snake')
+        snake.toggleAttribute('hidden');
+        setTimeout(() => {
+            //Reloads the frame
+            const frame = document.getElementById('snakeframe');
+            frame.src += '';
+            frame.focus();
+        }, 10)
+    })
+};
+
+
 const skills = Array.from(document.getElementsByClassName('lang'));
 const year = new Date().getFullYear();
 let biggest = 0;
@@ -13,17 +27,11 @@ skills.forEach(skill => {
 
     const fill = document.createElement('div');
     fill.classList.add('fill');
-    fill.style.width = ((year - startyear) / biggest * 100) + '%';
+    fill.style.width = ((year - startyear) / biggest * 80) + '%';
 
     const pre = document.createElement('pre');
     pre.innerText = (year - startyear) + " years";
-    if (+fill.style.width.replace('%', '') > 80) {
-        pre.style.textAlign = 'left';
-        pre.style.left = ((year - startyear) / biggest * 85) + '%';
-        pre.style.color = 'black';
-    } else {
-        pre.style.left = ((year - startyear) / biggest * 100) + '%';
-    }
+    pre.style.left = ((year - startyear) / biggest * 80) + '%';
     
 
     skill.appendChild(fill);
