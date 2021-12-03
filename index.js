@@ -6,5 +6,10 @@ skills.forEach(skill => {
     fill.classList.add('fill');
     fill.style.width = ((year - startyear) * 10) + '%';
 
+    const pre = document.createElement('pre');
+    pre.innerText = (year - startyear) + " years";
+    pre.style.left = ((year - startyear) * 10) + '%';
+
     skill.appendChild(fill);
+    skill.appendChild(pre);
 });
