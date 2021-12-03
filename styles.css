@@ -36,8 +36,18 @@ h3 {
     font-size: 2vw;
 }
 
+h4 {
+    font-weight: lighter;
+    margin: 1vw;
+    color: #e9e9e9;
+    font-family: 'Signika', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
 p {
     color: #e9e9e9;
+    margin: 1vw;
 }
 
 .grid {
@@ -58,21 +68,50 @@ p {
     width: 90%;
     background-color: rgb(61, 61, 61);
     border-radius: 1vw;
-    padding: 1vw;
     margin: 1vw auto 1vw auto;
-    text-align: center;
+    text-align: left;
+    position: relative;
+}
+
+.lang > p {
     font-weight: lighter;
-    color: #e9e9e9;
+    color: #000000;
     font-family: 'Signika', sans-serif;
     font-size: large;
+    padding: 1vw;
+    position: relative;
+    z-index: 2;
+    width: 50%;
+}
+
+.lang > pre {
+    font-weight: lighter;
+    font-family: 'Signika', sans-serif;
+    font-size: large;
+    color: #979797;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    margin: 0;
+    padding: 1vw;
+    z-index: 2;
 }
 
 .fill {
     position: absolute;
-    background-color: goldenrod;
+    background-color: rgb(235, 255, 124);
     border-radius: 1vw;
-    padding: 1vw;
     top: 0;
     left: 0;
-    margin: 1vw auto 1vw auto;
+    bottom: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        display: block;
+    }
 }
