@@ -52,16 +52,21 @@ p {
 
 .grid {
     margin: 3vw auto 3vw auto;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 98%;
 }
 
 .grid > div {
-    width: 98%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
     background-color: rgba(255, 255, 255, 0.055);
     border-radius: 0.5vw;
+    margin: auto 3vw auto 3vw;
 }
 
 .lang {
