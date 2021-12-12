@@ -46,3 +46,15 @@ skills.forEach(skill => {
     skill.appendChild(fill);
     skill.appendChild(pre);
 });
+
+GitHubCalendar(".calendar", "Edmier");
+
+// or enable responsive functionality:
+GitHubCalendar(".calendar", "Edmier", { responsive: true });
+
+// Use a proxy
+GitHubCalendar(".calendar", "Edmier", {
+   proxy (username) {
+     return fetch(`https://your-proxy.com/github?user=${username}`)
+   }
+}).then(r => r.text())
