@@ -1,14 +1,29 @@
+html {
+    overflow: hidden !important;
+}
+
 body {
-    margin: 0;
+    margin: auto auto;
     padding: 0;
     user-select: none;
     color: #e9e9e9;
+    overflow-y: scroll !important;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    padding-right: 20px;
+    padding-left: 10px;
 }
 
-body > div {
+#stars, #stars2, #stars3 {
     background-attachment: fixed;
     position: fixed;
     top: 0;
+}
+
+main {
+    background-attachment: scroll !important;
+    position: relative;
 }
 
 header {
@@ -39,10 +54,10 @@ h3 {
 
 h4 {
     font-weight: lighter;
-    margin: 1vw;
+    margin: 2vw 1vw 1vw 1vw;
     color: #e9e9e9;
     font-family: 'Signika', sans-serif;
-    font-size: 1.5vw;
+    font-size: 2vw;
     text-align: center;
 }
 
@@ -52,7 +67,7 @@ p {
 }
 
 .grid {
-    margin: 3vw auto 3vw auto;
+    margin: 2vw auto 2vw auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,7 +82,33 @@ p {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.055);
     border-radius: 0.5vw;
-    margin: auto 3vw auto 3vw;
+    padding-bottom: 1vw;
+    margin: 1vw 1vw auto 1vw;
+}
+
+#gallery {
+    text-align: center;
+    width: 100%;
+    margin: auto auto;
+}
+
+.project > img{
+    width: 100%;
+    border-radius: 0.5vw 0.5vw 0 0;
+}
+
+.project:hover {
+    transform: translateX(-5px) translateY(-5px);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.project > h5 {
+    font-weight: lighter;
+    margin: 2vw 1vw 1vw 1vw;
+    color: #e9e9e9;
+    font-family: 'Signika', sans-serif;
+    font-size: 2vw;
 }
 
 .lang {
@@ -126,14 +167,14 @@ p {
     cursor: pointer;
 }
 
-img:hover {
+#snakebtn > img:hover {
     transform: translateX(-2px) translateY(-2px);
     transition: all 0.2s;
 }
 
 #snake {
     position: absolute;
-    top: 25vh;
+    top: 5vh;
     left: 15vw; 
     right: 15vw;
     height: 450px;
@@ -151,5 +192,13 @@ iframe {
 @media (max-width: 1000px) {
     .grid {
         display: block;
+    }
+
+    .grid > div {
+        margin: 1vw auto 1vw auto;
+    }
+
+    #snakebtn {
+        display: none;
     }
 }

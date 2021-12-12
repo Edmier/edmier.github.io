@@ -1,13 +1,24 @@
 window.onload = () => {
     document.getElementById('snakebtn').addEventListener("click", () => {
-        const snake = document.getElementById('snake')
-        snake.toggleAttribute('hidden');
-        setTimeout(() => {
-            //Reloads the frame
-            const frame = document.getElementById('snakeframe');
-            frame.src += '';
-            frame.focus();
-        }, 10)
+        if (!document.getElementById('snake').hasAttribute('hidden')) {
+            document.getElementById('snake').setAttribute('hidden', 'true');
+            document.getElementById('snakeframe').src = '';
+        } else {
+            setTimeout(() => {
+                document.getElementById('snake').toggleAttribute('hidden');
+                //Reloads the frame
+                const frame = document.getElementById('snakeframe');
+                frame.src = 'snake/popup.html';
+                frame.focus();
+            }, 10);
+        }
+    })
+
+    document.addEventListener("click", () => {
+        if (!document.getElementById('snake').hasAttribute('hidden')) {
+            document.getElementById('snake').setAttribute('hidden', 'true');
+            document.getElementById('snakeframe').src = '';
+        }
     })
 };
 
@@ -19,8 +30,6 @@ let biggest = 0;
 skills.forEach(skill => {
     biggest = Math.max(year - skill.dataset.startyear, biggest);
 });
-
-console.log(biggest);
 
 skills.forEach(skill => {
     const startyear = skill.dataset.startyear;
