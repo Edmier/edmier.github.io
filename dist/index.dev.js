@@ -2,14 +2,18 @@
 
 window.onload = function () {
   document.getElementById('snakebtn').addEventListener("click", function () {
-    var snake = document.getElementById('snake');
-    snake.toggleAttribute('hidden');
+    document.getElementById('snake').toggleAttribute('hidden');
     setTimeout(function () {
       //Reloads the frame
       var frame = document.getElementById('snakeframe');
       frame.src += '';
       frame.focus();
     }, 10);
+  });
+  document.getElementsByTagName('body')[0].addEventListener("click", function () {
+    if (document.activeElement === document.getElementById('snake')) {
+      document.getElementById('snake').setAttribute('hidden', 'true');
+    }
   });
 };
 
