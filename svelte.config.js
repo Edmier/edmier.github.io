@@ -12,6 +12,19 @@ const config = {
     // If your environment is not supported or you settled on a specific environment, switch out the adapter.
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
     adapter: adapter(),
+    csp: {
+			mode: 'hash',
+		},
+		csrf: {
+			// Only disable if in development mode
+			checkOrigin: process.env.NODE_ENV !== 'development',
+		},
+		alias: {
+			'$comp': './src/components',
+			'$ui': './src/components/ui',
+			'$lib': './src/lib',
+			'$content': './src/content',
+		}
   },
 };
 
