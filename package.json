@@ -30,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@internationalized/date": "^3.5.1",
+		"@sveltejs/adapter-static": "^3.0.1",
 		"bits-ui": "^0.16.0",
 		"classnames": "^2.5.1",
 		"clsx": "^2.1.0",
