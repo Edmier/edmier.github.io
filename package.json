@@ -35,6 +35,7 @@
 		"classnames": "^2.5.1",
 		"clsx": "^2.1.0",
 		"cmdk-sv": "^0.0.13",
+		"embla-carousel-autoplay": "8.0.0-rc21",
 		"embla-carousel-svelte": "8.0.0-rc21",
 		"formsnap": "^0.4.3",
 		"lucide-svelte": "^0.317.0",

@@ -23,6 +23,9 @@ dependencies:
   cmdk-sv:
     specifier: ^0.0.13
     version: 0.0.13(svelte@4.2.7)
+  embla-carousel-autoplay:
+    specifier: 8.0.0-rc21
+    version: 8.0.0-rc21(embla-carousel@8.0.0-rc21)
   embla-carousel-svelte:
     specifier: 8.0.0-rc21
     version: 8.0.0-rc21(svelte@4.2.7)
@@ -963,6 +966,14 @@ packages:
   /electron-to-chromium@1.4.650:
     resolution: {integrity: sha512-sYSQhJCJa4aGA1wYol5cMQgekDBlbVfTRavlGZVr3WZpDdOPcp6a6xUnFfrt8TqZhsBYYbDxJZCjGfHuGupCRQ==}
     dev: true
+
+  /embla-carousel-autoplay@8.0.0-rc21(embla-carousel@8.0.0-rc21):
+    resolution: {integrity: sha512-o8T3+cpkZyJZfpN1PqxRDOdep/wlLvBQTIr0KUQbtk/y44esiAdZEGCjR/GJDJbl2huMIB/GzxkC7JQYEHZPxQ==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc21
+    dependencies:
+      embla-carousel: 8.0.0-rc21
+    dev: false
 
   /embla-carousel-reactive-utils@8.0.0-rc21(embla-carousel@8.0.0-rc21):
     resolution: {integrity: sha512-TnV49hoTdwfcKr2vgQHQ3zcCqJSkvLJ5rR/pGzmEx5GeO07CV/e755lkSD7No0C6cz+JFB8dcHV7uS+5Gnc7Lg==}
