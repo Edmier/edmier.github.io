@@ -28,7 +28,7 @@
 	<Sheet.Content side="right" class="pr-0">
 		<MobileLink href="/" class="flex items-center" bind:open>
 			<a class="flex flex-row gap-2 items-center" href="/">
-				<img src="/favicon.png" class="mr-3 h-4 w-4" alt="Elite Logo" />
+				<img src="{MAIN_INFO.siteLogo}" class="mr-3 h-6 w-6 rounded-full" alt="Site Logo" />
 			</a>
 			<span class="font-semibold">{MAIN_INFO.name}</span>
 		</MobileLink>

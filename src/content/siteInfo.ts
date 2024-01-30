@@ -11,6 +11,7 @@ export const MAIN_INFO = {
 	title: 'Programmer | Game Developer',
 	description:
 		'Kameron Edmier is a programmer, game developer, and student at Miami University in Oxford Ohio. Currently focused on improving the modality of games with integration into websites and Discord to encourage community growth and engagement.',
+	siteLogo: '/blackhole.jpg',
 	education: [
 		{
 			name: 'Miami University',

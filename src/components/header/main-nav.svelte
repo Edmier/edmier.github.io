@@ -9,7 +9,7 @@
 <div class="mr-4 hidden md:flex justify-between w-full items-center">
 	<a href="/" class="mr-6 flex items-center space-x-2">
 		<a class="flex flex-row gap-2 items-center" href="/">
-			<img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt="Elite Logo" />
+			<img src="{MAIN_INFO.siteLogo}" class="mr-3 h-6 sm:h-9 rounded-full" alt="Site Logo" />
 		</a>
 		<span class="hidden sm:inline-block leading-none self-center whitespace-nowrap text-xl font-semibold px-1">
 			{MAIN_INFO.name}

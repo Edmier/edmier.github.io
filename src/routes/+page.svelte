@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Contacts from "$comp/contacts.svelte";
+	import Projects from "$comp/projects.svelte";
 	import { MAIN_INFO as info } from "$content/siteInfo";
 </script>
 
@@ -18,6 +19,7 @@
 	<article class="flex flex-col gap-8 items-center" id="projects">
 		<h2 class="text-3xl">Projects</h2>
 
+		<Projects />
 		<p class="font-semibold">[ Under Construction ]</p>
 	</article>
 </main>
