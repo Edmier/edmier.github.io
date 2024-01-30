@@ -76,10 +76,6 @@ export const PROJECTS: Project[] = [
 				name: 'View Live Website',
 				url: 'https://elitebot.dev',
 			},
-			{
-				name: 'GitHub',
-				url: 'https://github.com/EliteFarmers/Website',
-			},
 		],
 		slideshow: [
 			{
