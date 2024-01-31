@@ -20,6 +20,7 @@
 		<h2 class="text-3xl">Projects</h2>
 
 		<Projects />
-		<p class="font-semibold">[ Under Construction ]</p>
 	</article>
+
+	<p class="font-semibold my-16">Under Construction - More To Come</p>
 </main>
