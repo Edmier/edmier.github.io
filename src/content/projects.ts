@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
 			{
 				name: 'Back End',
 				description:
-					'The backend is an ASP.NET Core Web API, and is hosted on a Docker Compose stack on Hetzner Cloud. The backend is responsible for fetching data from the game servers, transforming/parsing it, and serving it to the frontend with caches and authorization.',
+					"The backend is an ASP.NET Core Web API, and is hosted on a Docker Compose stack on Hetzner Cloud. Responsible for fetching data from Hypixel's API, parsing it, and serving it with caches and authorization.",
 				link: {
 					name: 'GitHub',
 					url: 'https://github.com/EliteFarmers/API',
@@ -164,6 +164,54 @@ export const PROJECTS: Project[] = [
 			{
 				image: '/projects/dungeon/menu.png',
 				description: 'Main menu',
+			},
+		],
+	},
+	{
+		name: 'Sorcelia',
+		date: 'Spring 2023 - (On Hold)',
+		description:
+			'A story of a young witch/wizard trying to escape their exile from the town. A farming simulator and potion brewing game with a focus on story and character development. Made during an independent study at Miami University, and put on hold to finish later in order to focus on current semester classes.',
+		sections: [
+			{
+				name: 'My Role',
+				description:
+					"I am the lead programmer for Sorcelia, responsible for the game's architecture, systems, and mechanics. I also work with the game's artist (Brooke Banfill) to implement the game's art assets.",
+				link: {
+					name: 'Brooke Banfill (LinkedIn)',
+					url: 'https://www.linkedin.com/in/brooke-banfill',
+				},
+			},
+			{
+				name: 'Interesting Features',
+				description:
+					'My goal with this project was to make it as extensible as I could. To this end, I built a custom save game system using custom C# attributes (not fully complete) and a resource pack system (inspired my Minecraft) that allows for easy modding of the game by adding new items, recipes, and more.',
+				link: {
+					name: 'Template Resource Pack Repository',
+					url: 'https://github.com/FarmingProject/TemplatePack',
+				},
+			},
+			{
+				name: 'Technologies',
+				list: ['Godot Engine 4', '.NET 8', 'C#'],
+			},
+		],
+		slideshow: [
+			{
+				image: '/projects/sorcelia/menu.png',
+				description: 'The main menu',
+			},
+			{
+				image: '/projects/sorcelia/crops.png',
+				description: 'Tend to dozens of crops',
+			},
+			{
+				image: '/projects/sorcelia/house.png',
+				description: 'Order board and shipping box',
+			},
+			{
+				image: '/projects/sorcelia/cauldron.png',
+				description: 'Brew potions in the cauldron',
 			},
 		],
 	},

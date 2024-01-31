@@ -6,10 +6,15 @@
 	export let project: Project;
 </script>
 
-<article class="flex flex-col items-center gap-8">
+<article class="flex flex-col items-center gap-8" id={encodeURIComponent(project.name.toLowerCase().replace(/ /g, '-'))}>
 	<div class="flex flex-col gap-2 self-start">
-		<h2 class="text-2xl font-semibold">{project.name}</h2>
-		<p class="text-sm text-gray-500 max-w-3xl">{project.description}</p>
+		<div class="flex flex-row justify-between">
+			<h2 class="text-2xl font-semibold">{project.name}</h2>
+			{#if project.date}
+				<p class="text-md text-primary/90 font-semibold">{project.date}</p>
+			{/if}
+		</div>
+		<p class="text-md text-primary/90">{project.description}</p>
 		{#if project.links && project.links.length > 0}
 			<div class="flex flex-col gap-2">
 				{#each project.links as link}
@@ -29,7 +34,7 @@
 	<div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-8">
 		<div class="flex flex-1 flex-col gap-4">
 			{#if project.slideshow && project.slideshow.length > 0}
-				<div class="px-10 max-w-full md:max-w-lg md:-mx-8">
+				<div class="px-10 max-w-full md:max-w-lg">
 					<Carousel.Root plugins={[ Autoplay({ delay: 5000 }) ]} opts={{ align: 'start', loop: true }}>
 						<Carousel.Previous class="hidden sm:inline-flex" />
 						<Carousel.Next class="hidden sm:inline-flex" />
@@ -67,12 +72,12 @@
 					<div class="flex flex-col gap-1">
 						<h3 class="text-lg font-semibold">{section.name}</h3>
 						{#if section.description}
-							<p class="text-sm text-gray-500">{section.description}</p>
+							<p class="text-sm text-primary/90">{section.description}</p>
 						{/if}
 						{#if section.list}
 							<div class="flex flex-wrap gap-4 mt-2">
 								{#each section.list as item}
-									<p class="text-sm text-gray-500">{item}</p>
+									<p class="text-sm text-primary/90">{item}</p>
 								{/each}
 							</div>
 						{/if}

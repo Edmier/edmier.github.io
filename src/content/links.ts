@@ -1,3 +1,4 @@
+import { PROJECTS } from './projects';
 import { MAIN_INFO } from './siteInfo';
 
 export const NAV_LINKS = [
@@ -15,5 +16,11 @@ export const NAV_LINKS = [
 	{
 		name: 'Projects',
 		url: '#projects',
+		sub: [
+			...PROJECTS.map((project) => ({
+				name: project.name,
+				url: `#${encodeURIComponent(project.name.toLowerCase().replace(/ /g, '-'))}`,
+			})),
+		],
 	},
 ];
