@@ -14,7 +14,7 @@
 	role="group"
 	aria-roledescription="slide"
 	class={cn(
-		"min-w-0 shrink-0 grow-0 basis-full",
+		"flex-[0_0_auto] max-w-full min-w-0",
 		$orientation === "horizontal" ? "pl-4" : "pt-4",
 		className
 	)}

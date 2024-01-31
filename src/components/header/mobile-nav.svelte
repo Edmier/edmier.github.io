@@ -2,7 +2,7 @@
 	import * as Sheet from '$ui/sheet';
 	import { Button } from '$ui/button';
 	import MobileLink from '$comp/header/mobile-link.svelte';
-	import { Menu } from 'lucide-svelte';
+	import Menu from 'lucide-svelte/icons/menu';
 	import ModeToggle from '$comp/header/mode-toggle.svelte';
 	import { NAV_LINKS } from '$content/links';
 	import { MAIN_INFO } from '$content/siteInfo';

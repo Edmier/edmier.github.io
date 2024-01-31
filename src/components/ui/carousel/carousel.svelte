@@ -2,7 +2,7 @@
 	import { setEmblaContex, type CarouselProps, type CarouselAPI } from "./context.js";
 	import { cn } from "$lib/utils.js";
 	import { writable } from "svelte/store";
-	import { onDestroy } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 
 	type $$Props = CarouselProps;
 
@@ -64,13 +64,18 @@
 		handleKeyDown,
 		options: optionsStore,
 		plugins: pluginStore,
-		onInit
+		onInit,
 	});
 
 	function onInit(event: CustomEvent<CarouselAPI>) {
 		api = event.detail;
 		apiStore.set(api);
+		api?.reInit();
 	}
+
+	onMount(() => {
+		api?.reInit();
+	});
 
 	onDestroy(() => {
 		api?.off("select", onSelect);
