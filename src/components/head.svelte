@@ -12,7 +12,7 @@
     <meta property="og:title" content={info.title}>
     <meta property="og:description" content="{info.descripton}">
 	{#if info.image}
-    	<meta property="og:image" content="{info.image}">
+    	<meta property="og:image" content="{$page.url.origin}{info.image}">
 	{/if}
 	<meta property="og:url" content={$page.url.toString()} />
 </svelte:head>

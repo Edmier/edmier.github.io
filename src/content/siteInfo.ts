@@ -3,7 +3,7 @@ export const SITE_META = {
 	descripton:
 		'Kameron Edmier is currently majoring in Games + Simulation at Miami University in Oxford Ohio with a focus on programming.',
 	'og:site_name': 'kameron.edmier.com',
-	image: '',
+	image: '/projects/elitewebsite/main.png',
 };
 
 export const MAIN_INFO = {
