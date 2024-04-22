@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
 			{
 				name: 'Interesting Features',
 				description:
-					'My goal with this project was to make it as extensible as I could. To this end, I built a custom save game system using custom C# attributes (not fully complete) and a resource pack system (inspired my Minecraft) that allows for easy modding of the game by adding new items, recipes, and more.',
+					'My goal with this project was to make it as extensible as I could. To this end, I built a custom save game system using custom C# attributes (not fully complete) and a resource pack system (inspired by Minecraft) that allows for easy modding of the game by adding new items, recipes, and more.',
 				link: {
 					name: 'Template Resource Pack Repository',
 					url: 'https://github.com/FarmingProject/TemplatePack',
