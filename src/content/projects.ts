@@ -31,7 +31,15 @@ export const PROJECTS: Project[] = [
 			{
 				name: 'Statistics',
 				description:
-					'Currently, the domain (through Cloudflare) sees 7.5 million requests and 91 thousand unique visitors per month. There\'s also 2.5k registered users, 850k tracked players, and the accompanying Discord Bot is in 1.5k servers. The website is also the first result on Google for the search term "elite farmers".',
+					'Currently, the domain (through Cloudflare) sees 20+ million requests and 200+ thousand unique visitors per month. There\'s also 15k registered users, 850k tracked players, and the accompanying Discord Bot is in 5,000 servers. The website is also the first result on Google for the search term "elite farmers".',
+			},
+			{
+				name: 'Monetization',
+				description: 'The website sells cosmetics and a subscription through Discord monetization, which has turned a profit.',
+				link: {
+					name: 'Shop Page',
+					url: 'https://elitebot.dev/shop',
+				},
 			},
 			{
 				name: 'Front End',
@@ -96,6 +104,10 @@ export const PROJECTS: Project[] = [
 				image: '/projects/elitewebsite/contests.png',
 				description: 'Leaderboards of in-game events ("contests")',
 			},
+			{
+				image: '/projects/elitewebsite/shop.png',
+				description: 'Shop page',
+			}
 		],
 	},
 	{
