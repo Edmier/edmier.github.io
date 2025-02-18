@@ -42,8 +42,8 @@
 	<div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-8">
 		<div class="flex flex-1 flex-col gap-4">
 			{#if project.slideshow && project.slideshow.length > 0}
-				<div class="px-10 max-w-full md:max-w-lg">
-					<Carousel.Root plugins={[ Autoplay({ delay: 5000 }) ]} opts={{ align: 'start', loop: true }}>
+				<div class="px-0 sm:px-10 max-w-full md:max-w-lg">
+					<Carousel.Root plugins={[ Autoplay({ delay: 5000 }) ]} opts={{ align: 'start', loop: true }} class="w-64 md:w-96 lg:w-full">
 						<Carousel.Previous class="hidden sm:inline-flex" />
 						<Carousel.Next class="hidden sm:inline-flex" />
 

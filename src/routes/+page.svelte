@@ -6,7 +6,7 @@
 
 <main class="flex flex-col items-center max-w-5xl self-center mx-4 gap-16 my-32">
 	<article class="flex flex-col gap-8 mb-8">
-		<div class="flex flex-col items-center self-center">
+		<div class="flex flex-col md:items-center self-center">
 			<h1 class="text-5xl pb-1">{info.name}</h1>
 			<span class="text-lg">{info.title}</span>
 		</div>
