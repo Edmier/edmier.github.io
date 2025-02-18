@@ -6,6 +6,7 @@ interface Link {
 export interface Project {
 	name: string;
 	description: string;
+	type: 'games' | 'web';
 	date: string;
 	sections: {
 		name: string;
@@ -24,6 +25,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
 	{
 		name: 'Elite Farmers Website',
+		type: 'web',
 		description:
 			'A full-stack project that brings in-game player stats to the web. Bringing player stats to the web brings together a community of players and encourages engagement. This project and idea is built around the public API provided by Hypixel Inc. for their Minecraft server, Hypixel.',
 		date: '2021 - Present',
@@ -35,7 +37,8 @@ export const PROJECTS: Project[] = [
 			},
 			{
 				name: 'Monetization',
-				description: 'The website sells cosmetics and a subscription through Discord monetization, which has turned a profit.',
+				description:
+					'The website sells cosmetics and a subscription through Discord monetization, which has turned a profit.',
 				link: {
 					name: 'Shop Page',
 					url: 'https://elitebot.dev/shop',
@@ -107,12 +110,13 @@ export const PROJECTS: Project[] = [
 			{
 				image: '/projects/elitewebsite/shop.png',
 				description: 'Shop page',
-			}
+			},
 		],
 	},
 	{
 		name: 'Dungeon Game (WIP Title)',
 		date: 'Fall 2023',
+		type: 'games',
 		description:
 			"Find treasure in a dark and spooky dungeon enviroment before you're caught by the creatures lurking in the walls. An unforgiving game that will punish any players being too callous. A completed game made in Godot 4.",
 		sections: [
@@ -182,6 +186,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: 'Sorcelia',
 		date: 'Spring 2023 - (On Hold)',
+		type: 'games',
 		description:
 			'A story of a young witch/wizard trying to escape their exile from the town. A farming simulator and potion brewing game with a focus on story and character development. Made during an independent study at Miami University, and put on hold to finish later in order to focus on current semester classes.',
 		sections: [

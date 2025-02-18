@@ -8,6 +8,10 @@
 	},
 	"aliases": {
 		"components": "$comp",
-		"utils": "$lib/utils"
-	}
+		"utils": "$lib/utils",
+		"ui": "$ui",
+		"hooks": "$lib/hooks"
+	},
+	"typescript": true,
+	"registry": "https://next.shadcn-svelte.com/registry"
 }

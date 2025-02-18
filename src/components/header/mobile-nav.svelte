@@ -11,24 +11,25 @@
 </script>
 
 <Sheet.Root bind:open>
-	<Sheet.Trigger asChild let:builder>
-		<div class="md:hidden">
-			<ModeToggle />
-		</div>
-
-		<Button
-			builders={[builder]}
-			variant="ghost"
-			class="mx-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
-		>
-			<Menu class="w-5 h-5" />
-			<span class="sr-only">Toggle Menu</span>
-		</Button>
+	<Sheet.Trigger>
+		{#snippet child({ props })}
+			<Button
+				variant="ghost"
+				class="mx-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+				{...props}
+			>
+				<Menu class="w-5 h-5" />
+				<span class="sr-only">Toggle Menu</span>
+			</Button>
+			<div class="md:hidden">
+				<ModeToggle />
+			</div>
+		{/snippet}
 	</Sheet.Trigger>
 	<Sheet.Content side="right" class="pr-0">
 		<MobileLink href="/" class="flex items-center" bind:open>
 			<a class="flex flex-row gap-2 items-center" href="/">
-				<img src="{MAIN_INFO.siteLogo}" class="mr-3 h-6 w-6 rounded-full" alt="Site Logo" />
+				<img src={MAIN_INFO.siteLogo} class="mr-3 h-6 w-6 rounded-full" alt="Site Logo" />
 			</a>
 			<span class="font-semibold">{MAIN_INFO.name}</span>
 		</MobileLink>

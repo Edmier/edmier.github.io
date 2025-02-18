@@ -4,7 +4,7 @@ import { MAIN_INFO } from './siteInfo';
 export const NAV_LINKS = [
 	{
 		name: 'Contact',
-		url: '#contact',
+		url: '/#contact',
 		sub: [
 			{
 				name: 'Email',
@@ -15,7 +15,7 @@ export const NAV_LINKS = [
 	},
 	{
 		name: 'Projects',
-		url: '#projects',
+		url: '/#projects',
 		sub: [
 			...PROJECTS.map((project) => ({
 				name: project.name,

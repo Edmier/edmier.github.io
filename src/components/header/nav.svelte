@@ -21,6 +21,6 @@
 		<div
 			class="w-full h-1 bg-green-300 absolute"
 			transition:slide={{ delay: 100, duration: 500, easing: quadInOut }}
-		/>
+		></div>
 	</div>
 {/if}
