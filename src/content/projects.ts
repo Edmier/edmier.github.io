@@ -3,17 +3,20 @@ interface Link {
 	url: string;
 }
 
+export interface ProjectSection {
+	name: string;
+	description?: string;
+	list?: string[];
+	link?: Link;
+}
+
 export interface Project {
 	name: string;
 	description: string;
+	tech?: string[];
 	type: 'games' | 'web';
 	date: string;
-	sections: {
-		name: string;
-		description?: string;
-		list?: string[];
-		link?: Link;
-	}[];
+	sections: ProjectSection[];
 	links?: Link[];
 	video?: Link;
 	slideshow?: {
@@ -29,7 +32,28 @@ export const PROJECTS: Project[] = [
 		description:
 			'A full-stack project that brings in-game player stats to the web. Bringing player stats to the web brings together a community of players and encourages engagement. This project and idea is built around the public API provided by Hypixel Inc. for their Minecraft server, Hypixel.',
 		date: '2021 - Present',
+		tech: [
+			'SvelteKit',
+			'TypeScript',
+			'TailwindCSS',
+			'Node.js',
+			'discord.js',
+			'ASP.NET Core',
+			'C#',
+			'PostgreSQL',
+			'Redis',
+			'RabbitMQ',
+			'Docker Compose',
+			'GitHub Actions',
+			'Cloudflare',
+			'Hetzner VPS',
+		],
 		sections: [
+			{
+				name: 'My Role',
+				description:
+					'I am the lead developer and owner of the project. I am responsible for the website, backend, and Discord bot, as well as hosting and maintenance.',
+			},
 			{
 				name: 'Statistics',
 				description:
@@ -46,8 +70,7 @@ export const PROJECTS: Project[] = [
 			},
 			{
 				name: 'Front End',
-				description:
-					'The website is built with SvelteKit and TailwindCSS. This is a fast and modern tech stack with a focus on performance and developer experience.',
+				description: 'The website is built with SvelteKit with Svelte 5 and TailwindCSS.',
 				link: {
 					name: 'GitHub',
 					url: 'https://github.com/EliteFarmers/Website',
@@ -61,27 +84,6 @@ export const PROJECTS: Project[] = [
 					name: 'GitHub',
 					url: 'https://github.com/EliteFarmers/API',
 				},
-			},
-			{
-				name: 'All Technologies',
-				description:
-					"The front end, back end, and discord bot use a wide variety of technologies, which is somewhat overengineed for a project of this size, but it's been a great learning experience.",
-				list: [
-					'SvelteKit',
-					'TypeScript',
-					'TailwindCSS',
-					'Node.js',
-					'discord.js',
-					'ASP.NET Core',
-					'C#',
-					'PostgreSQL',
-					'Redis',
-					'RabbitMQ',
-					'Docker Compose',
-					'GitHub Actions',
-					'Cloudflare',
-					'Hetzner Cloud',
-				],
 			},
 		],
 		links: [
@@ -117,6 +119,7 @@ export const PROJECTS: Project[] = [
 		name: 'Dungeon Game (WIP Title)',
 		date: 'Fall 2023',
 		type: 'games',
+		tech: ['Godot Engine 4', 'C#', '.NET 8'],
 		description:
 			"Find treasure in a dark and spooky dungeon enviroment before you're caught by the creatures lurking in the walls. An unforgiving game that will punish any players being too callous. A completed game made in Godot 4.",
 		sections: [
@@ -142,10 +145,6 @@ export const PROJECTS: Project[] = [
 				name: 'Where To Play',
 				description:
 					"The game was made for a class, which naturally lead to a limited scope of the project. While I do consider everything finished, there's currently only 10-20 minutes of actual gameplay content. I would like to expand the level size before making it public. For now, feel free to contact me if you'd like to play it.",
-			},
-			{
-				name: 'Technologies',
-				list: ['Godot Engine 4', 'C#', '.NET 8'],
 			},
 		],
 		video: {
@@ -187,6 +186,7 @@ export const PROJECTS: Project[] = [
 		name: 'Sorcelia',
 		date: 'Spring 2023 - (On Hold)',
 		type: 'games',
+		tech: ['Godot Engine 4', '.NET 8', 'C#'],
 		description:
 			'A story of a young witch/wizard trying to escape their exile from the town. A farming simulator and potion brewing game with a focus on story and character development. Made during an independent study at Miami University, and put on hold to finish later in order to focus on current semester classes.',
 		sections: [
@@ -207,10 +207,6 @@ export const PROJECTS: Project[] = [
 					name: 'Template Resource Pack Repository',
 					url: 'https://github.com/FarmingProject/TemplatePack',
 				},
-			},
-			{
-				name: 'Technologies',
-				list: ['Godot Engine 4', '.NET 8', 'C#'],
 			},
 		],
 		slideshow: [

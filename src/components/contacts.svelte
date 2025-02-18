@@ -14,10 +14,10 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			variant="secondary"
-			class="flex flex-row items-center gap-2 px-2"
+			class="flex flex-row items-center gap-2 px-2 min-w-12"
 			size="lg"
 		>
-			<Mail class="h-10 py-1 mx-1" />
+			<Mail class="!size-6" />
 		</Button>
 	</div>
 	{#each accounts as account}

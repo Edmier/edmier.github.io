@@ -6,14 +6,22 @@
 	export let project: Project;
 </script>
 
-<article class="flex flex-col items-center gap-8" id={encodeURIComponent(project.name.toLowerCase().replace(/ /g, '-'))}>
+<article class="flex flex-col items-center gap-8 p-8 rounded-lg bg-card border-2" id={encodeURIComponent(project.name.toLowerCase().replace(/ /g, '-'))}>
 	<div class="flex flex-col gap-2 self-start">
-		<div class="flex flex-row justify-between">
-			<h2 class="text-2xl font-semibold">{project.name}</h2>
-			{#if project.date}
-				<p class="text-md text-primary/90 font-semibold">{project.date}</p>
-			{/if}
+		<div class="flex flex-col gap-1">
+			<div class="flex flex-row justify-between">
+				<h2 class="text-2xl font-semibold">{project.name}</h2>
+				{#if project.date}
+					<p class="text-md text-primary/90 font-semibold">{project.date}</p>
+				{/if}
+			</div>
+			<div class="flex flex-wrap gap-2 mt-2">
+				{#each project.tech ?? [] as item}
+					<p class="text-xs text-primary/90 border p-1 px-2 rounded-sm">{item}</p>
+				{/each}
+			</div>
 		</div>
+		<hr class="mt-2 mb-3">
 		<p class="text-md text-primary/90">{project.description}</p>
 		{#if project.links && project.links.length > 0}
 			<div class="flex flex-col gap-2">
@@ -71,22 +79,26 @@
 				{#each project.sections as section}
 					<div class="flex flex-col gap-1">
 						<h3 class="text-lg font-semibold">{section.name}</h3>
-						{#if section.description}
-							<p class="text-sm text-primary/90">{section.description}</p>
-						{/if}
-						{#if section.list}
-							<div class="flex flex-wrap gap-4 mt-2">
-								{#each section.list as item}
-									<p class="text-sm text-primary/90">{item}</p>
-								{/each}
-							</div>
-						{/if}
-						{#if section.link}
-							<a class="text-sm text-blue-500 hover:underline" href="{section.link.url}">{section.link.name}</a>
-						{/if}
+						{@render sectionContent(section)}
 					</div>
 				{/each}
 			</section>
 		</div>
 	</div>
 </article>
+
+{#snippet sectionContent(section: typeof project['sections'][number])}
+	{#if section.description}
+		<p class="text-sm text-primary/90">{section.description}</p>
+	{/if}
+	{#if section.list}
+		<div class="flex flex-wrap gap-2 mt-2">
+			{#each section.list as item}
+				<p class="text-sm text-primary/90 border p-1 px-2 rounded-sm">{item}</p>
+			{/each}
+		</div>
+	{/if}
+	{#if section.link}
+		<a class="text-sm text-blue-500 hover:underline" href="{section.link.url}">{section.link.name}</a>
+	{/if}
+{/snippet}
