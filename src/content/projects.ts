@@ -27,6 +27,77 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
 	{
+		name: 'Oddity Hollow',
+		type: 'games',
+		tech: ['Godot Engine 4', 'C#', '.NET'],
+		description:
+			'A published video game on itch.io! Oddity Hollow is a 2D/3D mystery game where you bid in storage locker auctions, uncover the mystery of your missing brother, and have fun throwing around items on the way.',
+		date: '2024 - 2025',
+		links: [
+			{
+				name: 'oddityhollow.com (Official Website)',
+				url: 'https://oddityhollow.com',
+			}
+		],
+		slideshow: [
+			{
+				image: '/projects/oddityhollow/bidding.png',
+				description: 'Bidding in a storage locker auction',
+			},
+			{
+				image: '/projects/oddityhollow/marblelocker.png',
+				description: 'One of many storage lockers',
+			},
+			{
+				image: '/projects/oddityhollow/intro.png',
+				description: 'The intro cutscene',
+			},
+			{
+				image: '/projects/oddityhollow/inventory.png',
+				description: 'Player inventory',
+			},
+			{
+				image: '/projects/oddityhollow/map.png',
+				description: 'Map of the game world',
+			},
+			{
+				image: '/projects/oddityhollow/appraising.png',
+				description: 'Appraising an item at one of the appraisers',
+			},
+		],
+		sections: [
+			{
+				name: 'itch.io Release',
+				description: 'The game is released on itch.io! Feel free to check it out.',
+				link: {
+					name: 'Oddity Hollow on itch.io',
+					url: 'https://oddityhollow/play',
+				},
+			},
+			{
+				name: 'My Role',
+				description:
+					"I am the sole programmer for Oddity Hollow, responsible for the game's architecture, systems, and mechanics. Beyond that, I also facilitated the other team members' work by creating tools and systems to make their jobs easier.",
+				link: {
+					name: 'Blog post about my role',
+					url: 'https://oddityhollow.com/blog/people/kameron-edmier',
+				},
+			},
+			{
+				name: 'Accomplishments',
+				description: 'Beyond the large amount of lines of code I wrote, I also had to create a lot of tools to help the other team members. I implementd a similar resource pack system to the one I made for Sorcelia, for nearly every asset type. This allowed the artists to easily add new items and assets to the game without needing to ask me for help.',
+			},
+			{
+				name: 'oddityhollow.com',
+				description: 'You can read more about the game and the team on the website! (I also made the website)',
+				link: {
+					name: 'Oddity Hollow Website',
+					url: 'https://oddityhollow.com',
+				},
+			}
+		]
+	},
+	{
 		name: 'Elite Farmers Website',
 		type: 'web',
 		description:
@@ -119,7 +190,7 @@ export const PROJECTS: Project[] = [
 		name: 'Dungeon Game (WIP Title)',
 		date: 'Fall 2023',
 		type: 'games',
-		tech: ['Godot Engine 4', 'C#', '.NET 8'],
+		tech: ['Godot Engine 4', 'C#', '.NET'],
 		description:
 			"Find treasure in a dark and spooky dungeon enviroment before you're caught by the creatures lurking in the walls. An unforgiving game that will punish any players being too callous. A completed game made in Godot 4.",
 		sections: [
